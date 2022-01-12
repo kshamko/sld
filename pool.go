@@ -33,7 +33,7 @@ type workerFunc func(providerCFG ContentConfig, ip string, count int) ([]*Conten
 func StartPool(ctx context.Context, worker workerFunc, size int) *Pool {
 
 	results := make(chan PoolJobResult)
-	jobChan := make(chan PoolJob, size)
+	jobChan := make(chan PoolJob)
 	closeChan := make(chan struct{})
 
 	pool := &Pool{

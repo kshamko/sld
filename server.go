@@ -17,11 +17,6 @@ type App struct {
 	Config         ContentMix
 }
 
-type pagination struct {
-	count  int
-	offset int
-}
-
 const MAX_POOL_WORKERS = 10
 
 var (
